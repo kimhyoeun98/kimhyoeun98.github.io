@@ -121,14 +121,21 @@
       headers: { "Content-Type": "application/json" }
     })
     .then(response => response.json())
-.then(result => {
-  if (result.result === "success") {
-    alert("제출이 완료되었습니다!");
-    document.getElementById("contactForm").reset();
-  } else {
-    alert("오류 발생: " + result.message);
+    .then(result => {
+     if (result.result === "success") {
+      alert("제출이 완료되었습니다!");
+      document.getElementById("contactForm").reset();
+       } else {
+      alert("오류 발생: " + result.message);
   }
 })
+       google.script.run
+          .withSuccessHandler(function(response) {
+            document.getElementById("result").innerText = response;
+            document.getElementById("contactForm").reset();
+          })
+          .submitForm(data);
+      });
     .finally(() => {
       submitBtn.disabled = false;
       submitBtn.textContent = "보내기";
