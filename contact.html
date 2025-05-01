@@ -120,14 +120,15 @@
       body: JSON.stringify(data),
       headers: { "Content-Type": "application/json" }
     })
-    .then(response => response.text())
-    .then(result => {
-      alert("제출이 완료되었습니다!");
-      document.getElementById("contactForm").reset();
-    })
-    .catch(error => {
-      alert("오류가 발생했습니다: " + error);
-    })
+    .then(response => response.json())
+.then(result => {
+  if (result.result === "success") {
+    alert("제출이 완료되었습니다!");
+    document.getElementById("contactForm").reset();
+  } else {
+    alert("오류 발생: " + result.message);
+  }
+})
     .finally(() => {
       submitBtn.disabled = false;
       submitBtn.textContent = "보내기";
