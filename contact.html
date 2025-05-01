@@ -120,6 +120,12 @@
           body: JSON.stringify(data),
           headers: { "Content-Type": "application/json" }
         })
+           body: JSON.stringify({
+    name: "김효은",
+    email: "wldusiu@gmail.com",
+    phone: "010-1111-1111",
+    message: "asdasd"
+  })
         .then(response => response.text())
         .then(result => {
           alert("제출이 완료되었습니다!");
