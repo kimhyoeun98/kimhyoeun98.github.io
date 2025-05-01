@@ -100,47 +100,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     
-    <script>
+   <script>
   document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
     
     const submitBtn = document.getElementById("submitBtn");
     submitBtn.disabled = true;
     submitBtn.textContent = "전송 중...";
-    
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("email", data.email);
-    formData.append("phone", data.phone);
-    formData.append("message", data.message);
-    
-    fetch("https://script.google.com/macros/s/AKfycbzMs8h3QCkHxkyMBq8pUUULjnkWd_7zwlmI20xK1OZFz_lZXeYLFjbs8bxa1l1p0XPh/exec", {
+
+    const formData = new FormData(document.getElementById("contactForm"));
+
+    fetch("https://script.google.com/macros/s/AKfycbyi551OSAZgrq1UqoTnKkoIxns969vp-Y4mdwmikn-qyvQTHSxkioGwEQBVHO4fK9M/exec", {
       method: "POST",
-      body: formData,
-      headers: { "Content-Type": "application/json" }
+      body: formData
     })
-    .then(response => response.json())
+    .then(response => response.text())
     .then(result => {
-     if (result.result === "success") {
       alert("제출이 완료되었습니다!");
       document.getElementById("contactForm").reset();
-       } else {
-      alert("오류 발생: " + result.message);
-  }
-})
-       google.script.run
-          .withSuccessHandler(function(response) {
-            document.getElementById("result").innerText = response;
-            document.getElementById("contactForm").reset();
-          })
-          .submitForm(data);
-      });
+    })
+    .catch(error => {
+      alert("오류가 발생했습니다: " + error);
+    })
     .finally(() => {
       submitBtn.disabled = false;
       submitBtn.textContent = "보내기";
     });
   });
-</script>
+ </script>
   
   </body>
 </html>
