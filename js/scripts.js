@@ -1,7 +1,16 @@
-/*!
-* Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-personal/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+const menuButton = document.querySelector(".menu-button");
+const navigation = document.querySelector("#navigation");
+
+menuButton?.addEventListener("click", () => {
+  const isOpen = navigation.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.textContent = isOpen ? "CLOSE" : "MENU";
+});
+
+navigation?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navigation.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+    if (menuButton) menuButton.textContent = "MENU";
+  });
+});
