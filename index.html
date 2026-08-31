@@ -3,190 +3,178 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="김효은 Game QA 포트폴리오 — 테스트 설계, 버그 재현, 협업과 재검증 경험">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="김효은 Game QA 포트폴리오 - 테스트 설계, 버그 재현, 프로젝트 경험">
+  <meta name="theme-color" content="#fbfaf7">
   <meta property="og:title" content="김효은 | Game QA Portfolio">
-  <meta property="og:description" content="플레이어의 불편을 재현 가능한 언어로 바꾸는 Game QA 김효은입니다.">
+  <meta property="og:description" content="관찰한 문제를 재현 가능한 기록으로 바꾸는 Game QA 김효은입니다.">
   <title>김효은 | Game QA Portfolio</title>
   <link rel="icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 <header class="site-header">
-  <a class="brand" href="#top"><b>HE</b><span>GAME QA</span></a>
-  <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">MENU</button>
+  <a class="brand" href="#top" aria-label="처음으로"><b>HE</b><span>GAME QA</span></a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="navigation">메뉴</button>
   <nav id="navigation" aria-label="주요 메뉴">
-    <a href="#strengths">역량</a><a href="#projects">프로젝트</a><a href="#play">플레이 경험</a><a href="#stack">기술</a><a href="#contact">연락처</a>
+    <a href="#about">소개</a><a href="#strengths">QA 역량</a><a href="#projects">프로젝트</a><a href="#experience">경험·기술</a><a href="#contact">연락처</a>
   </nav>
 </header>
 
 <main id="main">
-<section class="hero" id="top">
-  <div>
-    <p class="label"><i></i> GAME QA PORTFOLIO · 2026</p>
-    <h1>김효은 <em>|</em><br>Game QA</h1>
-    <p class="hero-lead">플레이어의 막연한 불편을 <strong>재현 가능한 버그</strong>와 <strong>검증 가능한 개선</strong>으로 바꿉니다.</p>
-    <p class="subcopy">기획 의도를 이해하고, 환경과 절차를 기록하며, 수정 이후의 재테스트까지 책임지는 QA를 지향합니다.</p>
-    <div class="actions">
-      <a class="button dark" href="#projects">프로젝트 보기 <span>↘</span></a>
-      <a class="button" href="https://github.com/kimhyoeun98" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> GAME QA PORTFOLIO</p>
+      <h1>김효은 <em>|</em><br>Game QA</h1>
+      <p class="hero-lead">플레이어가 겪는 불편을 발견하고,<br><strong>팀이 해결할 수 있는 기록</strong>으로 바꿉니다.</p>
+      <div class="actions">
+        <a class="button primary" href="#projects">프로젝트 한눈에 보기 <span>↓</span></a>
+        <a class="button" href="https://github.com/kimhyoeun98" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
+      </div>
     </div>
-  </div>
-  <aside class="console" aria-label="QA 업무 흐름">
-    <div class="console-head"><span>QA_LOOP.LOG</span><b>LIVE</b></div>
-    <ol>
-      <li><span>01</span><p><b>OBSERVE</b><small>플레이 흐름과 기대 동작 파악</small></p></li>
-      <li><span>02</span><p><b>REPRODUCE</b><small>환경·조건·빈도로 재현</small></p></li>
-      <li><span>03</span><p><b>REPORT</b><small>명확한 절차와 증거로 공유</small></p></li>
-      <li><span>04</span><p><b>VERIFY</b><small>수정 빌드 재테스트와 회귀 확인</small></p></li>
-    </ol>
-    <div class="console-foot"><span>STATUS</span><b>READY TO TEST</b></div>
-  </aside>
-</section>
-
-<section class="section" id="strengths">
-  <div class="section-title"><p>01 / CORE</p><h2>QA 핵심 역량</h2><span>문제를 찾는 데서 끝나지 않고, 해결 가능한 정보로 연결합니다.</span></div>
-  <div class="strength-grid">
-    <article><span>01</span><h3>테스트 설계</h3><p>기능 명세와 플레이 흐름을 기준으로 정상·예외·경계 조건을 나누고 테스트 시나리오와 체크리스트를 구성합니다.</p><ul><li>기능·UI·호환성 관점</li><li>예상 결과와 판정 기준 명시</li></ul></article>
-    <article><span>02</span><h3>버그 재현·리포팅</h3><p>발생 환경, 선행 조건, 재현 절차와 빈도를 분리해 기록하고 심각도와 사용자 영향을 함께 전달합니다.</p><ul><li>재현율과 증거 자료 중심</li><li>확인하기 쉬운 문장 구조</li></ul></article>
-    <article><span>03</span><h3>원인 추적·재검증</h3><p>로그와 상태 변화를 관찰해 문제 범위를 좁히고, 수정 빌드에서 동일 조건 재테스트와 주변 기능 회귀 검증을 수행합니다.</p><ul><li>클라이언트·서버 경계 확인</li><li>Fixed·Reopen 이력 관리</li></ul></article>
-    <article><span>04</span><h3>협업 커뮤니케이션</h3><p>기획 의도와 실제 동작의 차이를 질문으로 확인하고, QA·개발·기획이 같은 현상을 보도록 정보를 구조화합니다.</p><ul><li>우선순위와 영향 범위 공유</li><li>피드백 루프 추적</li></ul></article>
-  </div>
-</section>
-
-<section class="section project-section" id="projects">
-  <div class="section-title"><p>02 / PROJECTS</p><h2>프로젝트</h2><span>QA 실무 관점의 핵심 프로젝트와 학기별 성장 과정을 한눈에 정리했습니다.</span></div>
-
-  <div class="project-category">
-    <div class="category-heading">
-      <div><p class="meta">CORE PORTFOLIO</p><h3>QA · 개발 핵심 경험</h3></div>
-      <span>03 PROJECTS</span>
+    <div class="hero-summary" aria-label="포트폴리오 요약">
+      <p class="summary-kicker">AT A GLANCE</p>
+      <div class="summary-number"><strong>07</strong><span>정리된 프로젝트</span></div>
+      <div class="qa-flow"><span>관찰</span><i>→</i><span>재현</span><i>→</i><span>리포트</span><i>→</i><span>재검증</span></div>
+      <p>기획 의도와 실제 동작의 차이를 찾고, 환경·절차·결과를 명확하게 기록합니다.</p>
     </div>
-    <div class="project-list">
-      <article class="project">
-        <span class="project-no">01</span>
-        <div>
-          <p class="meta">GAME DEVELOPMENT · QA / UNITY / MULTIPLAYER</p>
-          <h3>ScrapAndSprout</h3>
-          <p class="summary">쓰레기를 수거하고 자원을 거래해 공간을 회복시키는 2D 협동 멀티플레이 게임.</p>
-          <div class="detail"><p><b>QA 관점</b>로그인부터 로비, 대기실, 수집, 거래, 꾸미기로 이어지는 플레이 흐름과 멀티플레이 동기화·인벤토리 반영·PCG 맵을 검증했습니다.</p><p><b>담당 역할</b>게임 기획, Unity 클라이언트 개발, 주요 기능 테스트, 버그 재현, 오류 원인 분석, 수정 후 재검증</p></div>
-          <div class="tags"><span>Unity</span><span>C#</span><span>Photon Fusion</span><span>REST API</span><span>MySQL</span></div>
-        </div>
-        <a class="arrow" href="https://github.com/kimhyoeun98/ScrapAndSprout" target="_blank" rel="noreferrer" aria-label="ScrapAndSprout 저장소">↗</a>
-      </article>
-      <article class="project">
-        <span class="project-no">02</span>
-        <div>
-          <p class="meta">QA WORKFLOW PLATFORM · PLANNING / DOCUMENTATION</p>
-          <h3>GameFlow</h3>
-          <p class="summary">테스트 케이스, 버그, 피드백, 수정 빌드와 재테스트를 하나의 이력으로 연결하는 게임 QA 협업 플랫폼.</p>
-          <div class="detail"><p><b>QA 관점</b>Test Case → Bug → Feedback → Fixed Build → Retest → Resolved 흐름을 설계해 어떤 빌드에서 무엇을 검증했는지 추적하도록 구조화했습니다.</p><p><b>핵심 산출물</b>QA 대시보드, 테스트 케이스·버그 리포트 필드, 심각도·우선순위, 상태 전이와 협업 규칙</p></div>
-          <div class="tags"><span>Test Case</span><span>Bug Tracking</span><span>Retest</span><span>QA Docs</span></div>
-        </div>
-        <a class="arrow" href="https://github.com/kimhyoeun98/GameFlow" target="_blank" rel="noreferrer" aria-label="GameFlow 저장소">↗</a>
-      </article>
-      <article class="project">
-        <span class="project-no">03</span>
-        <div>
-          <p class="meta">WEB SERVICE · FULL STACK / GAME COMMUNITY</p>
-          <h3>UnderWatch</h3>
-          <p class="summary">오버워치 게임 정보와 커뮤니티 기능을 제공하는 Spring 기반 웹 서비스.</p>
-          <div class="detail"><p><b>QA 관점</b>일반·OAuth2·얼굴 인식 로그인, 게시글·댓글·신고, 쪽지·알림, 관리자 기능처럼 권한과 상태가 복잡한 사용자 흐름을 검증할 수 있는 프로젝트입니다.</p><p><b>검증 범위</b>인증 방식별 분기, 회원·비회원 권한, 실시간 알림, 외부 API 연동, 탈퇴 유예와 관리자 처리</p></div>
-          <div class="tags"><span>Java</span><span>Spring MVC</span><span>Spring Security</span><span>MyBatis</span><span>Oracle</span></div>
-        </div>
-        <a class="arrow" href="https://github.com/kimhyoeun98/UnderWatch" target="_blank" rel="noreferrer" aria-label="UnderWatch 저장소">↗</a>
-      </article>
-    </div>
-  </div>
+  </section>
 
-  <div class="academic-projects">
-    <div class="category-heading academic-heading">
-      <div><p class="meta">ACADEMIC ARCHIVE</p><h3>학기별 프로젝트</h3></div>
-      <span>2025 · YEAR 1</span>
+  <section class="intro section" id="about">
+    <p class="section-index">01 / ABOUT</p>
+    <div>
+      <h2>보이는 현상 너머의<br>사용자 경험을 살핍니다.</h2>
+      <p>기능이 단순히 동작하는지를 넘어, 처음 접하는 플레이어가 이해할 수 있는지, 반복 플레이에서도 흐름이 자연스러운지 확인합니다. 발견한 문제는 재현 조건과 영향 범위를 갖춘 정보로 정리합니다.</p>
+    </div>
+  </section>
+
+  <section class="section" id="strengths">
+    <div class="section-heading">
+      <div><p class="section-index">02 / CORE</p><h2>QA 핵심 역량</h2></div>
+      <p>문제 발견부터 수정 확인까지 한 흐름으로 연결합니다.</p>
+    </div>
+    <div class="strength-grid">
+      <article><span>01</span><h3>테스트 설계</h3><p>정상·예외·경계 조건을 나누고 예상 결과와 판정 기준을 정의합니다.</p></article>
+      <article><span>02</span><h3>버그 재현</h3><p>환경, 선행 조건, 절차와 빈도를 분리해 누구나 따라 할 수 있게 기록합니다.</p></article>
+      <article><span>03</span><h3>원인 추적</h3><p>로그와 상태 변화를 관찰해 문제 범위를 좁히고 관련 기능을 확인합니다.</p></article>
+      <article><span>04</span><h3>재검증·협업</h3><p>수정 빌드를 다시 테스트하고 결과와 영향 범위를 팀에 명확히 공유합니다.</p></article>
+    </div>
+  </section>
+
+  <section class="section project-section" id="projects">
+    <div class="section-heading project-heading">
+      <div><p class="section-index">03 / PROJECTS</p><h2>프로젝트 한눈에 보기</h2></div>
+      <p>프로젝트 카드를 누르면 역할, 기능과 실제 자료 화면을 확인할 수 있습니다.</p>
     </div>
 
-    <div class="semester">
-      <div class="semester-label"><b>1학년 1학기</b><span>FOUNDATION</span></div>
-      <div class="archive-grid">
-        <article class="archive-card">
-          <div class="archive-top"><span>01</span><b>개인 개발</b></div>
-          <p class="meta">JAVA CONSOLE COMMERCE</p>
-          <h4>직팜 <small>JIKFARM</small></h4>
-          <p>생산자와 소비자를 직접 연결하는 농수산물 직거래 콘솔 쇼핑몰. 역할별 메뉴와 상품·주문·후기 흐름을 구현했습니다.</p>
-          <dl><div><dt>핵심 기능</dt><dd>상품·재고·주문·배송 상태·후기·관리자 로그</dd></div><div><dt>검증 포인트</dt><dd>역할별 권한, 입력 예외, 파일 저장, 요구사항 구현 상태</dd></div></dl>
-          <div class="tags"><span>Java</span><span>OOP</span><span>File I/O</span><span>Console UI</span></div>
-        </article>
-        <article class="archive-card">
-          <div class="archive-top"><span>02</span><b>팀 기획</b></div>
-          <p class="meta">SMART DORMITORY SERVICE</p>
-          <h4>기숙사In</h4>
-          <p>모바일 인증과 출입 데이터를 활용해 대면 점호의 불편을 줄이는 기숙사 입·퇴실 모니터링 시스템.</p>
-          <dl><div><dt>핵심 기능</dt><dd>자동 점호, 외출 신고, 입실 현황 대시보드, 미입실 알림</dd></div><div><dt>검증 포인트</dt><dd>인증 성공·실패, 시간대별 기록, 상태 누락, 관리자 조회</dd></div></dl>
-          <div class="tags"><span>Mobile Web</span><span>BLE / Wi-Fi</span><span>Database</span><span>Dashboard</span></div>
-        </article>
+    <div class="project-group">
+      <div class="group-title"><div><span>CORE PORTFOLIO</span><h3>QA · 개발 핵심 경험</h3></div><b>3 PROJECTS</b></div>
+      <div class="project-grid core-grid">
+        <button class="project-card accent-purple" type="button" data-project="scrap">
+          <span class="project-type">UNITY · MULTIPLAYER</span><strong>ScrapAndSprout</strong>
+          <p>수집과 거래로 공간을 회복하는 2D 협동 게임</p>
+          <span class="card-footer"><i>Unity · C# · Photon</i><b>자세히 보기 →</b></span>
+        </button>
+        <button class="project-card accent-blue" type="button" data-project="gameflow">
+          <span class="project-type">QA WORKFLOW</span><strong>GameFlow</strong>
+          <p>테스트와 버그, 재검증 이력을 연결하는 QA 협업 플랫폼</p>
+          <span class="card-footer"><i>Test Case · Retest</i><b>자세히 보기 →</b></span>
+        </button>
+        <button class="project-card accent-peach" type="button" data-project="underwatch">
+          <span class="project-type">WEB · GAME COMMUNITY</span><strong>UnderWatch</strong>
+          <p>오버워치 정보와 커뮤니티 기능을 제공하는 웹 서비스</p>
+          <span class="card-footer"><i>Java · Spring · Oracle</i><b>자세히 보기 →</b></span>
+        </button>
       </div>
     </div>
 
-    <div class="semester">
-      <div class="semester-label"><b>1학년 2학기</b><span>EXPANSION</span></div>
-      <div class="archive-grid">
-        <article class="archive-card">
-          <div class="archive-top"><span>03</span><b>서비스 기획</b></div>
-          <p class="meta">SMART RETAIL SERVICE</p>
-          <h4>편하점</h4>
-          <p>학생 참여로 교내 편의점의 상품 구성과 재고 운영을 개선하는 스마트 리테일 관리 서비스.</p>
-          <dl><div><dt>핵심 기능</dt><dd>인기 메뉴 투표, 실시간 재고, 사전 예약·결제, 재입고 알림</dd></div><div><dt>설계 관점</dt><dd>조회 → 선택 → 예약 흐름, 반복 사용, 품절·알림 상태</dd></div></dl>
-          <div class="tags"><span>Service Planning</span><span>Prototype</span><span>Agile</span><span>UX Flow</span></div>
-        </article>
-        <article class="archive-card">
-          <div class="archive-top"><span>04</span><b>연구 제안</b></div>
-          <p class="meta">AR SCIENCE EDUCATION</p>
-          <h4>새순 <small>SAESUN</small></h4>
-          <p>AR 환경에서 가상 식물을 재배하며 초등 과학의 식물 성장 원리를 탐구하는 교육 시스템 제안.</p>
-          <dl><div><dt>핵심 기능</dt><dd>타임랩스, X-Ray 시각화, 관찰 일지, 성장 그래프, 도감·배지</dd></div><div><dt>현재 단계</dt><dd>교육적 활용과 기술 구성을 정의한 기획·연구 제안 단계</dd></div></dl>
-          <div class="tags"><span>Unity</span><span>ARCore / ARKit</span><span>Gamification</span><span>EdTech</span></div>
-        </article>
+    <div class="project-group academic-group">
+      <div class="group-title"><div><span>ACADEMIC ARCHIVE</span><h3>학기별 프로젝트</h3></div><b>4 PROJECTS</b></div>
+      <div class="semester-row">
+        <div class="semester-title"><strong>1학년 1학기</strong><span>FOUNDATION</span></div>
+        <div class="project-grid academic-grid">
+          <button class="project-card accent-green" type="button" data-project="jikfarm">
+            <span class="project-type">개인 개발 · JAVA CONSOLE</span><strong>직팜 <small>JIKFARM</small></strong>
+            <p>생산자와 소비자를 연결하는 농수산물 직거래 쇼핑몰</p>
+            <span class="card-footer"><i>Java · File I/O</i><b>자료 화면 보기 →</b></span>
+          </button>
+          <button class="project-card accent-sky" type="button" data-project="dormitory">
+            <span class="project-type">팀 기획 · SMART DORMITORY</span><strong>기숙사In</strong>
+            <p>모바일 인증 기반 입·퇴실 및 점호 모니터링 시스템</p>
+            <span class="card-footer"><i>Mobile · BLE/Wi-Fi</i><b>자료 화면 보기 →</b></span>
+          </button>
+        </div>
+      </div>
+      <div class="semester-row">
+        <div class="semester-title"><strong>1학년 2학기</strong><span>EXPANSION</span></div>
+        <div class="project-grid academic-grid">
+          <button class="project-card accent-orange" type="button" data-project="pyeon">
+            <span class="project-type">서비스 기획 · SMART RETAIL</span><strong>편하점</strong>
+            <p>학생 참여로 교내 편의점 운영을 개선하는 서비스</p>
+            <span class="card-footer"><i>Planning · UX Flow</i><b>자료 화면 보기 →</b></span>
+          </button>
+          <button class="project-card accent-leaf" type="button" data-project="saesun">
+            <span class="project-type">연구 제안 · AR EDUCATION</span><strong>새순 <small>SAESUN</small></strong>
+            <p>AR 가상 식물 재배를 활용한 초등 과학 교육 시스템</p>
+            <span class="card-footer"><i>AR · EdTech</i><b>자료 화면 보기 →</b></span>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="play">
-  <div class="section-title"><p>03 / PLAYER EYE</p><h2>게임 플레이 경험</h2><span>플레이어의 감각과 QA의 관찰을 함께 기록합니다.</span></div>
-  <div class="play-grid">
-    <article class="game-card"><div class="game-mark">OW<sup>2</sup></div><div><p class="label">PRIMARY PLAY EXPERIENCE</p><h3>Overwatch 2</h3><p>역할별 전투 흐름, 영웅 상성, 맵 동선과 팀 커뮤니케이션을 반복 경험했습니다. 패치 이후 체감 변화와 UI·매칭·전투 피드백을 플레이어 관점에서 관찰합니다.</p></div></article>
-    <div class="observations">
-      <p><span>01</span><b>전투 피드백</b>피격·스킬·사운드 정보가 판단에 미치는 영향</p>
-      <p><span>02</span><b>맵과 동선</b>목표 지점, 리스폰, 시야와 이동의 공정성</p>
-      <p><span>03</span><b>패치 체감</b>밸런스 변경 전후의 플레이 경험 비교</p>
-      <p><span>04</span><b>협동 경험</b>역할 수행과 정보 전달이 팀 흐름에 미치는 영향</p>
+  <section class="section experience-section" id="experience">
+    <div class="section-heading">
+      <div><p class="section-index">04 / EXPERIENCE</p><h2>플레이 경험과 기술</h2></div>
+      <p>게임을 오래 즐긴 플레이어의 시선과 직접 만든 개발 경험을 함께 활용합니다.</p>
     </div>
-  </div>
-</section>
+    <div class="experience-grid">
+      <article class="play-card">
+        <span class="overwatch-mark">OW<sup>2</sup></span>
+        <div><p class="project-type">PRIMARY PLAY EXPERIENCE</p><h3>Overwatch 2</h3><p>역할별 전투 흐름, 영웅 상성, 맵 동선과 패치 전후의 변화를 반복 플레이하며 관찰합니다.</p></div>
+      </article>
+      <article class="tool-card">
+        <h3>QA & DOCUMENT</h3><p><span>Test Case</span><span>Bug Report</span><span>Regression Test</span><span>GitHub Issues</span></p>
+        <h3>GAME & DEVELOPMENT</h3><p><span>Unity</span><span>C#</span><span>Photon Fusion</span><span>Java</span><span>Spring</span><span>SQL</span></p>
+      </article>
+    </div>
+  </section>
 
-<section class="section" id="stack">
-  <div class="section-title"><p>04 / TOOLKIT</p><h2>기술 스택</h2><span>게임과 서비스를 직접 이해하고 검증하기 위한 도구들입니다.</span></div>
-  <div class="stack-grid">
-    <article><h3>QA & DOCUMENT</h3><p><span>Test Case</span><span>Bug Report</span><span>Checklist</span><span>Regression Test</span><span>GitHub Issues</span></p></article>
-    <article><h3>GAME & CLIENT</h3><p><span>Unity</span><span>C#</span><span>Photon Fusion</span><span>TextMeshPro</span></p></article>
-    <article><h3>WEB & SERVER</h3><p><span>Java</span><span>Spring</span><span>REST API</span><span>HTML</span><span>CSS</span><span>JavaScript</span></p></article>
-    <article><h3>DATA & TOOLS</h3><p><span>MySQL</span><span>Oracle</span><span>SQL</span><span>Git</span><span>GitHub</span></p></article>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <p class="label">05 / CONTACT</p>
-  <h2>좋은 게임 경험을<br><em>끝까지 검증하겠습니다.</em></h2>
-  <p>테스트의 근거를 남기고, 팀이 해결할 수 있는 방식으로 소통하는 Game QA 김효은입니다.</p>
-  <a class="button light" href="https://github.com/kimhyoeun98" target="_blank" rel="noreferrer">github.com/kimhyoeun98 <span>↗</span></a>
-</section>
+  <section class="contact" id="contact">
+    <p class="section-index">05 / CONTACT</p>
+    <h2>좋은 게임 경험을<br>끝까지 검증하겠습니다.</h2>
+    <p>근거를 남기고, 팀이 해결할 수 있는 방식으로 소통하는 Game QA 김효은입니다.</p>
+    <a class="button light" href="https://github.com/kimhyoeun98" target="_blank" rel="noreferrer">GitHub에서 더 보기 <span>↗</span></a>
+  </section>
 </main>
 
-<footer><span>© 2026 HYOEUN KIM</span><span>GAME QA PORTFOLIO</span><a href="#top">BACK TO TOP ↑</a></footer>
+<footer><span>© 2026 HYOEUN KIM</span><span>GAME QA PORTFOLIO</span><a href="#top">맨 위로 ↑</a></footer>
+
+<dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+  <div class="dialog-shell">
+    <button class="dialog-close" type="button" aria-label="프로젝트 상세 닫기">×</button>
+    <div class="dialog-content">
+      <header class="dialog-header">
+        <p id="dialog-type" class="project-type"></p><h2 id="dialog-title"></h2>
+        <p id="dialog-summary" class="dialog-summary"></p><div id="dialog-tags" class="dialog-tags"></div>
+      </header>
+      <div class="dialog-facts">
+        <section><h3>무엇을 만들었나요?</h3><p id="dialog-purpose"></p></section>
+        <section><h3>핵심 기능</h3><ul id="dialog-features"></ul></section>
+        <section><h3 id="dialog-focus-title">QA · 설계 관점</h3><p id="dialog-focus"></p></section>
+      </div>
+      <section class="project-gallery" id="dialog-gallery-section">
+        <div class="gallery-heading"><div><p class="project-type">PROJECT MATERIALS</p><h3>자료로 보는 프로젝트</h3></div><span>이미지를 누르면 크게 볼 수 있습니다.</span></div>
+        <div id="dialog-gallery" class="gallery-grid"></div>
+      </section>
+      <a id="dialog-link" class="button primary dialog-link" target="_blank" rel="noreferrer">GitHub 저장소 보기 <span>↗</span></a>
+    </div>
+  </div>
+</dialog>
+
 <script src="js/scripts.js"></script>
 </body>
 </html>
