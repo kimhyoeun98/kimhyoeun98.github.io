@@ -39,7 +39,7 @@ const projects = {
     link: "https://github.com/kimhyoeun98/GameFlow"
   },
   underwatch: {
-    type: "WEB SERVICE · FULL STACK / GAME COMMUNITY",
+    type: "2학년 1학기 · WEB SERVICE / GAME COMMUNITY",
     title: "UnderWatch",
     summary: "오버워치 게임 정보와 커뮤니티 기능을 제공하는 Spring 기반 웹 서비스입니다.",
     purpose: "게임 이용자가 정보 탐색과 커뮤니티 활동을 한곳에서 할 수 있도록 인증, 게시판, 알림과 관리자 기능을 구현했습니다.",
@@ -47,7 +47,12 @@ const projects = {
     focusTitle: "QA 관점",
     focus: "로그인 방식에 따른 분기, 회원·비회원 권한, 외부 API 연동, 탈퇴 유예와 신고 처리처럼 상태와 권한이 복잡한 흐름을 중심으로 검증했습니다.",
     tags: ["Java", "Spring MVC", "Spring Security", "MyBatis", "Oracle"],
-    link: "https://github.com/kimhyoeun98/UnderWatch"
+    link: "https://github.com/kimhyoeun98/UnderWatch",
+    gallery: [
+      ["https://github.com/user-attachments/assets/50e4a9ac-beed-4926-b30c-2fa8419bbc71", "UnderWatch 메인 화면"],
+      ["https://github.com/user-attachments/assets/d7dea3b8-5cc5-40f0-bcf6-37293c4499bc", "오버워치 게임 정보 화면"],
+      ["https://github.com/user-attachments/assets/308f64d6-c9f1-4196-a33f-ff330423091d", "얼굴 인식 로그인 화면"]
+    ]
   },
   jikfarm: {
     type: "개인 개발 · JAVA CONSOLE COMMERCE",
@@ -91,6 +96,33 @@ const projects = {
       ["assets/projects/pyeon-problem.jpg", "교내 편의점의 이용자·판매자 문제 정의"],
       ["assets/projects/pyeon-model.jpg", "학생 참여 데이터를 활용한 서비스 모델"],
       ["assets/projects/pyeon-flow.jpg", "구매자와 판매자를 연결하는 편하점 흐름"]
+    ]
+  },
+  playground: {
+    type: "1학년 2학기 · WEB DEVELOPMENT / GAME STORE",
+    title: "PlayGround",
+    summary: "게임 탐색부터 장바구니·구매·환불·커뮤니티까지 구현한 Steam형 게임 판매 웹 서비스입니다.",
+    purpose: "게임 목록·상세·카테고리 탐색과 회원별 구매 라이브러리, 포인트 결제, 커뮤니티를 하나의 서비스 흐름으로 구현했습니다.",
+    features: ["신규·인기·장르별 게임 탐색", "장바구니·포인트 결제·구매 라이브러리·환불", "회원·게시판·댓글과 관리자 게임·회원 관리"],
+    focusTitle: "개발 · 검증 관점",
+    focus: "회원과 관리자 권한, 장바구니 수량·선택 삭제, 포인트 결제와 환불 이후 상태, 회원 탈퇴처럼 여러 데이터가 함께 바뀌는 흐름을 중심으로 확인할 수 있는 프로젝트입니다.",
+    tags: ["Java", "JSP / JSTL", "MyBatis", "Oracle", "MVC"],
+    link: "https://github.com/kimhyoeun98/PlayGround"
+  },
+  review: {
+    type: "2학년 1학기 · DATA / SENTIMENT ANALYSIS",
+    title: "Review-Crawling-by-Game",
+    summary: "Steam 게임 리뷰를 대량 수집하고 KcELECTRA로 본문 감성을 분석·시각화하는 AI 서비스입니다.",
+    purpose: "평점만으로 드러나지 않는 실제 리뷰 감성을 분석해 장르·게임별 경향을 비교하고, 사용자가 입력한 리뷰의 부정 확률도 확인하도록 구현했습니다.",
+    features: ["560,520건 리뷰·7개 장르 수집 및 전처리", "KcELECTRA 감성 분석과 3개 모델 성능 비교", "카테고리 통계·실시간 인기 게임·리뷰 감성 검사"],
+    focusTitle: "데이터 · 검증 관점",
+    focus: "cursor 기반 수집 누락, 중단 후 체크포인트 복구, 중복·노이즈 정제, 모델별 정확도와 오탐·미탐, 부정 리뷰 차단 임계값을 검증했습니다. 채택 모델은 검증 정확도 89.3%, Macro F1 0.893을 기록했습니다.",
+    tags: ["Python", "Selenium", "KcELECTRA", "Streamlit", "Plotly"],
+    link: "https://github.com/kimhyoeun98/Review-Crawling-by-Game",
+    gallery: [
+      ["assets/projects/review-overview.jpg", "리뷰 수집·학습·감성 분석 서비스 개요"],
+      ["assets/projects/review-model.jpg", "KcELECTRA 검증 정확도와 모델 성능 비교"],
+      ["assets/projects/review-service.jpg", "카테고리 통계·인기 게임·리뷰 감성 검사 화면"]
     ]
   },
   saesun: {
@@ -192,4 +224,3 @@ dialog?.addEventListener("close", () => {
   document.body.classList.remove("dialog-open");
   lastFocusedElement?.focus();
 });
-
