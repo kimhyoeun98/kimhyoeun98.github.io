@@ -107,7 +107,8 @@ const projects = {
     focusTitle: "개발 · 검증 관점",
     focus: "회원과 관리자 권한, 장바구니 수량·선택 삭제, 포인트 결제와 환불 이후 상태, 회원 탈퇴처럼 여러 데이터가 함께 바뀌는 흐름을 중심으로 확인할 수 있는 프로젝트입니다.",
     tags: ["Java", "JSP / JSTL", "MyBatis", "Oracle", "MVC"],
-    link: "https://github.com/kimhyoeun98/PlayGround"
+    link: "https://github.com/kimhyoeun98/PlayGround",
+    video: ["8CVUxk0uYaM", "PlayGround 서비스 시연 영상"]
   },
   review: {
     type: "2학년 1학기 · DATA / SENTIMENT ANALYSIS",
@@ -138,7 +139,8 @@ const projects = {
       ["assets/projects/saesun-overview.jpg", "AR 식물 재배 시스템의 학습 흐름"],
       ["assets/projects/saesun-features-1.jpg", "타임랩스·과학 시각화·자동화된 관찰 일지"],
       ["assets/projects/saesun-features-2.jpg", "데이터 분석·게임화·개인화 학습 기능"]
-    ]
+    ],
+    video: ["3Pi2Z1mFtDU", "제9회 벤처 창업 경진대회 참가 영상 — 팀 새순"]
   }
 };
 
@@ -196,6 +198,23 @@ function openProject(projectKey) {
     return figure;
   }));
 
+  const videoSection = dialog.querySelector("#dialog-video-section");
+  const videoFrame = dialog.querySelector("#dialog-video");
+  const videoTitle = dialog.querySelector("#dialog-video-title");
+  const videoLink = dialog.querySelector("#dialog-video-link");
+  const video = project.video;
+  videoSection.hidden = !video;
+  if (video) {
+    const [videoId, title] = video;
+    videoFrame.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0`;
+    videoFrame.title = title;
+    videoTitle.textContent = title;
+    videoLink.href = `https://youtu.be/${videoId}`;
+  } else {
+    videoFrame.removeAttribute("src");
+    videoFrame.removeAttribute("title");
+  }
+
   const repositoryLink = dialog.querySelector("#dialog-link");
   repositoryLink.hidden = !project.link;
   if (project.link) repositoryLink.href = project.link;
@@ -210,6 +229,7 @@ document.querySelectorAll("[data-project]").forEach((button) => {
 });
 
 function closeProject() {
+  dialog?.querySelector("#dialog-video")?.removeAttribute("src");
   dialog?.close();
 }
 
@@ -221,6 +241,8 @@ dialog?.addEventListener("click", (event) => {
   if (!inside) closeProject();
 });
 dialog?.addEventListener("close", () => {
+  dialog.querySelector("#dialog-video")?.removeAttribute("src");
   document.body.classList.remove("dialog-open");
   lastFocusedElement?.focus();
 });
+
